@@ -1,0 +1,8 @@
+D:\моя папка\3 курс 2 семестр\кг\лаб1\ColorTransform\ColorTransform\bin\Debug\ColorTransform.exe
+D:\моя папка\3 курс 2 семестр\кг\лаб1\ColorTransform\ColorTransform\bin\Debug\ColorTransform.pdb
+D:\моя папка\3 курс 2 семестр\кг\лаб1\ColorTransform\ColorTransform\obj\Debug\ResolveAssemblyReference.cache
+D:\моя папка\3 курс 2 семестр\кг\лаб1\ColorTransform\ColorTransform\obj\Debug\ColorTransform.Properties.Resources.resources
+D:\моя папка\3 курс 2 семестр\кг\лаб1\ColorTransform\ColorTransform\obj\Debug\ColorTransform.csproj.GenerateResource.Cache
+D:\моя папка\3 курс 2 семестр\кг\лаб1\ColorTransform\ColorTransform\obj\Debug\ColorTransform.exe
+D:\моя папка\3 курс 2 семестр\кг\лаб1\ColorTransform\ColorTransform\obj\Debug\ColorTransform.pdb
+D:\моя папка\3 курс 2 семестр\кг\лаб1\ColorTransform\ColorTransform\obj\Debug\ColorTransform.ColorForm.resources
