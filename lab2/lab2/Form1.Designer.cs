@@ -148,7 +148,7 @@
             this.sourceBarR.Size = new System.Drawing.Size(318, 45);
             this.sourceBarR.TabIndex = 1;
             this.sourceBarR.Value = 255;
-            this.sourceBarR.ValueChanged += new System.EventHandler(this.sourceBarR_ValueChanged);
+            this.sourceBarR.Scroll += new System.EventHandler(this.sourceBarR_ValueChanged);
             // 
             // label1
             // 
@@ -177,7 +177,7 @@
             this.sourceBarG.Size = new System.Drawing.Size(318, 45);
             this.sourceBarG.TabIndex = 6;
             this.sourceBarG.Value = 255;
-            this.sourceBarG.ValueChanged += new System.EventHandler(this.sourceBarG_ValueChanged);
+            this.sourceBarG.Scroll += new System.EventHandler(this.sourceBarG_ValueChanged);
             // 
             // sourceNumericG
             // 
@@ -215,7 +215,7 @@
             this.sourceBarB.Size = new System.Drawing.Size(318, 45);
             this.sourceBarB.TabIndex = 9;
             this.sourceBarB.Value = 255;
-            this.sourceBarB.ValueChanged += new System.EventHandler(this.sourceBarB_ValueChanged);
+            this.sourceBarB.Scroll += new System.EventHandler(this.sourceBarB_ValueChanged);
             // 
             // sourceNumericB
             // 
@@ -253,7 +253,7 @@
             this.targetBarR.Size = new System.Drawing.Size(318, 45);
             this.targetBarR.TabIndex = 12;
             this.targetBarR.Value = 255;
-            this.targetBarR.ValueChanged += new System.EventHandler(this.targetBarR_ValueChanged);
+            this.targetBarR.Scroll += new System.EventHandler(this.targetBarR_ValueChanged);
             // 
             // targetNumericR
             // 
@@ -291,7 +291,7 @@
             this.targetBarG.Size = new System.Drawing.Size(318, 45);
             this.targetBarG.TabIndex = 15;
             this.targetBarG.Value = 255;
-            this.targetBarG.ValueChanged += new System.EventHandler(this.targetBarG_ValueChanged);
+            this.targetBarG.Scroll += new System.EventHandler(this.targetBarG_ValueChanged);
             // 
             // targetNumericG
             // 
@@ -329,7 +329,7 @@
             this.targetBarB.Size = new System.Drawing.Size(318, 45);
             this.targetBarB.TabIndex = 18;
             this.targetBarB.Value = 255;
-            this.targetBarB.ValueChanged += new System.EventHandler(this.targetBarB_ValueChanged);
+            this.targetBarB.Scroll += new System.EventHandler(this.targetBarB_ValueChanged);
             // 
             // targetNumericB
             // 
@@ -386,7 +386,7 @@
             this.senBarL.Size = new System.Drawing.Size(236, 45);
             this.senBarL.TabIndex = 23;
             this.senBarL.Value = 100;
-            this.senBarL.ValueChanged += new System.EventHandler(this.senBarL_ValueChanged);
+            this.senBarL.Scroll += new System.EventHandler(this.senBarL_ValueChanged);
             // 
             // senNumericL
             // 
@@ -419,7 +419,7 @@
             this.senBarA.Size = new System.Drawing.Size(236, 45);
             this.senBarA.TabIndex = 26;
             this.senBarA.Value = 100;
-            this.senBarA.ValueChanged += new System.EventHandler(this.senBarA_ValueChanged);
+            this.senBarA.Scroll += new System.EventHandler(this.senBarA_ValueChanged);
             // 
             // senNumericA
             // 
@@ -452,7 +452,7 @@
             this.senBarB.Size = new System.Drawing.Size(236, 45);
             this.senBarB.TabIndex = 29;
             this.senBarB.Value = 100;
-            this.senBarB.ValueChanged += new System.EventHandler(this.senBarB_ValueChanged);
+            this.senBarB.Scroll += new System.EventHandler(this.senBarB_ValueChanged);
             // 
             // senNumericB
             // 
@@ -485,7 +485,7 @@
             this.senBarSen.Size = new System.Drawing.Size(236, 45);
             this.senBarSen.TabIndex = 32;
             this.senBarSen.Value = 100;
-            this.senBarSen.ValueChanged += new System.EventHandler(this.senBarSen_ValueChanged);
+            this.senBarSen.Scroll += new System.EventHandler(this.senBarSen_ValueChanged);
             // 
             // senNumericSen
             // 

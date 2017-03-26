@@ -7,12 +7,15 @@ using System.Linq;
 using System.Text;
 using System.Windows.Forms;
 using System.IO;
+using System.Drawing.Imaging;
+using System.Threading;
 
 namespace lab2
 {
     public partial class Relax : Form
     {
 
+        private bool is_repaint = false;
         private const int RGB_Value = 255;
         private const int LAB_L_Value = 100;
         private const int LAB_AB_Value = 128;
@@ -34,74 +37,134 @@ namespace lab2
 
         private void sourceNumericR_ValueChanged(object sender, EventArgs e)
         {
-            this.sourceBarR.Value = (int)this.sourceNumericR.Value;
-            SetSourceColor();
+            if (!this.is_repaint)
+            {
+                this.is_repaint = true;
+                this.sourceBarR.Value = (int)this.sourceNumericR.Value;
+                SetSourceColor();
+                this.is_repaint = false;
+            }
         }
 
         private void sourceNumericG_ValueChanged(object sender, EventArgs e)
         {
-            this.sourceBarG.Value = (int)this.sourceNumericG.Value;
-            SetSourceColor();
+            if (!this.is_repaint)
+            {
+                this.is_repaint = true;
+                this.sourceBarG.Value = (int)this.sourceNumericG.Value;
+                SetSourceColor();
+                this.is_repaint = false;
+            }
         }
 
         private void sourceNumericB_ValueChanged(object sender, EventArgs e)
         {
-            this.sourceBarB.Value = (int)this.sourceNumericB.Value;
-            SetSourceColor();
+            if (!this.is_repaint)
+            {
+                this.is_repaint = true;
+                this.sourceBarB.Value = (int)this.sourceNumericB.Value;
+                SetSourceColor();
+                this.is_repaint = false;
+            }
         }
 
         private void sourceBarR_ValueChanged(object sender, EventArgs e)
         {
-            this.sourceNumericR.Value = this.sourceBarR.Value;
-            SetSourceColor();
+            if (!this.is_repaint)
+            {
+                this.is_repaint = true;
+                this.sourceNumericR.Value = this.sourceBarR.Value;
+                SetSourceColor();
+                this.is_repaint = false;
+            }
         }
 
         private void sourceBarG_ValueChanged(object sender, EventArgs e)
         {
-            this.sourceNumericG.Value = this.sourceBarG.Value;
-            SetSourceColor();
+            if (!this.is_repaint)
+            {
+                this.is_repaint = true;
+                this.sourceNumericG.Value = this.sourceBarG.Value;
+                SetSourceColor();
+                this.is_repaint = false;
+            }
         }
 
         private void sourceBarB_ValueChanged(object sender, EventArgs e)
         {
-            this.sourceNumericB.Value = this.sourceBarB.Value;
-            SetSourceColor();
+            if (!this.is_repaint)
+            {
+                this.is_repaint = true;
+                this.sourceNumericB.Value = this.sourceBarB.Value;
+                SetSourceColor();
+                this.is_repaint = false;
+            }
         }
 
         private void targetNumericR_ValueChanged(object sender, EventArgs e)
         {
-            this.targetBarR.Value = (int)this.targetNumericR.Value;
-            SetTargetColor();
+            if (!this.is_repaint)
+            {
+                this.is_repaint = true;
+                this.targetBarR.Value = (int)this.targetNumericR.Value;
+                SetTargetColor();
+                this.is_repaint = false;
+            }
         }
 
         private void targetNumericG_ValueChanged(object sender, EventArgs e)
         {
-            this.targetBarG.Value = (int)this.targetNumericG.Value;
-            SetTargetColor();
+            if (!this.is_repaint)
+            {
+                this.is_repaint = true;
+                this.targetBarG.Value = (int)this.targetNumericG.Value;
+                SetTargetColor();
+                this.is_repaint = false;
+            }
         }
 
         private void targetNumericB_ValueChanged(object sender, EventArgs e)
         {
-            this.targetBarB.Value = (int)this.targetNumericB.Value;
-            SetTargetColor();
+            if (!this.is_repaint)
+            {
+                this.is_repaint = true;
+                this.targetBarB.Value = (int)this.targetNumericB.Value;
+                SetTargetColor();
+                this.is_repaint = false;
+            }
         }
 
         private void targetBarR_ValueChanged(object sender, EventArgs e)
         {
-            this.targetNumericR.Value = this.targetBarR.Value;
-            SetTargetColor();
+            if (!this.is_repaint)
+            {
+                this.is_repaint = true;
+                this.targetNumericR.Value = this.targetBarR.Value;
+                SetTargetColor();
+                this.is_repaint = false;
+            }
         }
 
         private void targetBarG_ValueChanged(object sender, EventArgs e)
         {
-            this.targetNumericG.Value = this.targetBarG.Value;
-            SetTargetColor();
+            if (!this.is_repaint)
+            {
+                this.is_repaint = true;
+                this.targetNumericG.Value = this.targetBarG.Value;
+                SetTargetColor();
+                this.is_repaint = false;
+            }
         }
 
         private void targetBarB_ValueChanged(object sender, EventArgs e)
         {
-            this.targetNumericB.Value = this.targetBarB.Value;
-            SetTargetColor();
+            if (!this.is_repaint)
+            {
+                this.is_repaint = true;
+                this.targetNumericB.Value = this.targetBarB.Value;
+                SetTargetColor();
+                this.is_repaint = false;
+            }
         }
 
         private void senNumericL_ValueChanged(object sender, EventArgs e)
@@ -148,14 +211,14 @@ namespace lab2
         {
             Color color = Color.FromArgb(targetBarR.Value, targetBarG.Value, targetBarB.Value);
             this.targetSample.BackColor = color;
-            //ChangePixels();
+            ChangePixels();
         }
 
         private void SetSourceColor()
         {
             Color color = Color.FromArgb(sourceBarR.Value, sourceBarG.Value, sourceBarB.Value);
             this.sourceSample.BackColor = color;
-            //ChangePixels();
+            ChangePixels();
         }
 
         private void loadButton_Click(object sender, EventArgs e)
@@ -182,7 +245,9 @@ namespace lab2
                     }
                     Bitmap targetBitmap = new Bitmap(this.sourcePicture.Image.Width, this.sourcePicture.Image.Height);
                     targetPicture.Image = targetBitmap;
-                    //ChangePixels();
+                    this.is_repaint = true;
+                    ChangePixels();
+                    this.is_repaint = false;
                 }
                 catch (Exception ex)
                 {
@@ -206,10 +271,16 @@ namespace lab2
                 {
                     pixelColor = this.sourcePicture.BackColor;
                 }
+                this.is_repaint = true;
                 this.sourceSample.BackColor = pixelColor;
                 this.sourceNumericR.Value = pixelColor.R;
                 this.sourceNumericG.Value = pixelColor.G;
                 this.sourceNumericB.Value = pixelColor.B;
+                this.sourceBarR.Value = pixelColor.R;
+                this.sourceBarG.Value = pixelColor.G;
+                this.sourceBarB.Value = pixelColor.B;
+                ChangePixels();
+                this.is_repaint = false;
             }
         }
 
@@ -309,38 +380,69 @@ namespace lab2
             var sen = this.senBarSen.Value;
             var dist = Math.Sqrt(Lw*Math.Pow(this.sourceLAB[0] - sourceColor[0], 2.0) + La*Math.Pow(this.sourceLAB[1] - sourceColor[1], 2.0) + Lb*Math.Pow(this.sourceLAB[2] - sourceColor[2], 2.0));
             return dist < sen;
+            return true;
         }
-
         private void ChangePixels()
         {
-            var diff = GetSourceTargetDifference();
-            if (this.sourcePicture.Image!=null)
-            {
-                Bitmap targetBitmap = new Bitmap(this.sourcePicture.Image.Width, this.sourcePicture.Image.Height);
-                var size = ((Bitmap)this.sourcePicture.Image).Size;
-                for (int i = 0; i < size.Width; i++)
+                var watch = System.Diagnostics.Stopwatch.StartNew();
+                var diff = GetSourceTargetDifference();
+                var Lw = this.senBarL.Value / 100.0;
+                var La = this.senBarA.Value / 100.0;
+                var Lb = this.senBarB.Value / 100.0;
+                var sen = this.senBarSen.Value;
+                if (this.sourcePicture.Image != null)
                 {
-                    for (int j = 0; j < size.Height; j++)
+                    Bitmap targetBitmap = targetPicture.Image != null ? (Bitmap)targetPicture.Image : new Bitmap(this.sourcePicture.Image.Width, this.sourcePicture.Image.Height);
+                    Bitmap sourceBitmap = (Bitmap)(this.sourcePicture.Image);
+                    BitmapData srcData = sourceBitmap.LockBits(new Rectangle(0, 0, sourceBitmap.Width, sourceBitmap.Height), ImageLockMode.ReadOnly, sourceBitmap.PixelFormat);
+                    BitmapData trgData = targetBitmap.LockBits(new Rectangle(0, 0, targetBitmap.Width, targetBitmap.Height), ImageLockMode.ReadWrite, sourceBitmap.PixelFormat);
+                    var size = ((Bitmap)this.sourcePicture.Image).Size;
+                    int srcStride = srcData.Stride;
+                    int bytesPerPixel = System.Drawing.Bitmap.GetPixelFormatSize(sourceBitmap.PixelFormat) / 8;
+                    int heightInPixels = srcData.Height;
+                    int widthInBytes = srcData.Width * bytesPerPixel;
+                    int stride = srcData.Stride;
+                    unsafe
                     {
-                        var sourceColor = ((Bitmap)this.sourcePicture.Image).GetPixel(i, j);
-                        Color color = sourceColor;
-                        var sourceLab = GetLabFromRGB(new int[] { sourceColor.R, sourceColor.G, sourceColor.B });
-                        if (ShouldUpdate(sourceLab, diff))
+                        byte* trgPointer = (byte*)trgData.Scan0;
+                        byte* srcPointer = (byte*)srcData.Scan0;
+
+                        for (int y = 0; y < heightInPixels; y++)
                         {
-                            var targetLab = new int[] { sourceLab[0] += diff[0], sourceLab[1] += diff[1], sourceLab[2] += diff[2] };
-                            var targetRGB = RGBFromLAB(targetLab);
-                            color = Color.FromArgb(targetRGB[0], targetRGB[1], targetRGB[2]);
+                            byte* currentLine = srcPointer + (y * stride);
+                            byte* currentTarget = trgPointer + (y * stride);
+                            for (int x = 0; x < widthInBytes; x = x + bytesPerPixel)
+                            {
+                                Color color = Color.FromArgb(currentLine[x+2], currentLine[x +1], currentLine[x]);
+                                var sourceLab = GetLabFromRGB(new int[] { currentLine[x + 2], currentLine[x + 1], currentLine[x + 0] });
+                                var dist = Math.Sqrt(Lw * Math.Pow(this.sourceLAB[0] - sourceLab[0], 2.0) + La * Math.Pow(this.sourceLAB[1] - sourceLab[1], 2.0) + Lb * Math.Pow(this.sourceLAB[2] - sourceLab[2], 2.0));
+                                if (dist < sen)
+                                {
+                                    var targetLab = new int[] { sourceLab[0] += diff[0], sourceLab[1] += diff[1], sourceLab[2] += diff[2] };
+                                    var targetRGB = RGBFromLAB(targetLab);
+                                    color = Color.FromArgb(targetRGB[0], targetRGB[1], targetRGB[2]);
+                                }
+                                 
+                                currentTarget[x] = color.B;
+                                currentTarget[x + 1] = color.G;
+                                currentTarget[x + 2] = color.R;
+                            }
                         }
-                        targetBitmap.SetPixel(i, j, color);
                     }
+                    targetBitmap.UnlockBits(trgData);
+                    sourceBitmap.UnlockBits(srcData);
+                    targetPicture.Image = targetBitmap;
                 }
-                targetPicture.Image = targetBitmap;
-            }
+                watch.Stop();
+                var elapsedMs = watch.ElapsedMilliseconds;
+                Console.WriteLine("M" + elapsedMs);
         }
 
         private void applyButton_Click(object sender, EventArgs e)
         {
+            this.is_repaint = true;
             ChangePixels();
+            this.is_repaint = false;
         }
     }
 }
