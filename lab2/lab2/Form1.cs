@@ -170,41 +170,49 @@ namespace lab2
         private void senNumericL_ValueChanged(object sender, EventArgs e)
         {
             this.senBarL.Value = (int)this.senNumericL.Value;
+            ChangePixels();
         }
 
         private void senNumericA_ValueChanged(object sender, EventArgs e)
         {
             this.senBarA.Value = (int)this.senNumericA.Value;
+            ChangePixels();
         }
 
         private void senNumericB_ValueChanged(object sender, EventArgs e)
         {
             this.senBarB.Value = (int)this.senNumericB.Value;
+            ChangePixels();
         }
 
         private void senNumericSen_ValueChanged(object sender, EventArgs e)
         {
             this.senBarSen.Value = (int)this.senNumericSen.Value;
+            ChangePixels();
         }
 
         private void senBarL_ValueChanged(object sender, EventArgs e)
         {
             this.senNumericL.Value = this.senBarL.Value;
+            ChangePixels();
         }
 
         private void senBarA_ValueChanged(object sender, EventArgs e)
         {
             this.senNumericA.Value = this.senBarA.Value;
+            ChangePixels();
         }
 
         private void senBarB_ValueChanged(object sender, EventArgs e)
         {
             this.senNumericB.Value = this.senBarB.Value;
+            ChangePixels();
         }
 
         private void senBarSen_ValueChanged(object sender, EventArgs e)
         {
             this.senNumericSen.Value = this.senBarSen.Value;
+            ChangePixels();
         }
 
         private void SetTargetColor()
@@ -435,7 +443,6 @@ namespace lab2
                 }
                 watch.Stop();
                 var elapsedMs = watch.ElapsedMilliseconds;
-                Console.WriteLine("M" + elapsedMs);
         }
 
         private void applyButton_Click(object sender, EventArgs e)
