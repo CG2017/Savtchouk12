@@ -6,3 +6,5 @@ D:\моя папка\3 курс 2 семестр\кг\lab3\lab3\bin\Debug\lab3.e
 D:\моя папка\3 курс 2 семестр\кг\lab3\lab3\bin\Debug\lab3.pdb
 D:\моя папка\3 курс 2 семестр\кг\lab3\lab3\obj\Debug\lab3.exe
 D:\моя папка\3 курс 2 семестр\кг\lab3\lab3\obj\Debug\lab3.pdb
+D:\моя папка\3 курс 2 семестр\labs\lab3\lab3\obj\Debug\lab3.exe
+D:\моя папка\3 курс 2 семестр\labs\lab3\lab3\obj\Debug\lab3.pdb
