@@ -1,0 +1,10 @@
+D:\моя папка\3 курс 2 семестр\кг\lab5\lab5\obj\Debug\ResolveAssemblyReference.cache
+D:\моя папка\3 курс 2 семестр\кг\lab5\lab5\obj\Debug\lab5.Form1.resources
+D:\моя папка\3 курс 2 семестр\кг\lab5\lab5\obj\Debug\lab5.Properties.Resources.resources
+D:\моя папка\3 курс 2 семестр\кг\lab5\lab5\obj\Debug\lab5.csproj.GenerateResource.Cache
+D:\моя папка\3 курс 2 семестр\кг\lab5\lab5\bin\Debug\lab5.exe
+D:\моя папка\3 курс 2 семестр\кг\lab5\lab5\bin\Debug\lab5.pdb
+D:\моя папка\3 курс 2 семестр\кг\lab5\lab5\bin\Debug\ZedGraph.dll
+D:\моя папка\3 курс 2 семестр\кг\lab5\lab5\bin\Debug\ZedGraph.Web.dll
+D:\моя папка\3 курс 2 семестр\кг\lab5\lab5\obj\Debug\lab5.exe
+D:\моя папка\3 курс 2 семестр\кг\lab5\lab5\obj\Debug\lab5.pdb
