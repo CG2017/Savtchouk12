@@ -1,0 +1,8 @@
+D:\моя папка\3 курс 2 семестр\кг\lab6\lab3\obj\Release\ResolveAssemblyReference.cache
+D:\моя папка\3 курс 2 семестр\кг\lab6\lab3\obj\Release\lab3.Relax.resources
+D:\моя папка\3 курс 2 семестр\кг\lab6\lab3\obj\Release\lab3.Properties.Resources.resources
+D:\моя папка\3 курс 2 семестр\кг\lab6\lab3\obj\Release\lab3.csproj.GenerateResource.Cache
+D:\моя папка\3 курс 2 семестр\кг\lab6\lab3\bin\Release\lab3.exe
+D:\моя папка\3 курс 2 семестр\кг\lab6\lab3\bin\Release\lab3.pdb
+D:\моя папка\3 курс 2 семестр\кг\lab6\lab3\obj\Release\lab3.exe
+D:\моя папка\3 курс 2 семестр\кг\lab6\lab3\obj\Release\lab3.pdb
